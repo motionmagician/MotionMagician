@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f6f9;
+}
+
+/* ✅ NAVBAR FIXED */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    padding: 12px 20px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-weight: bold;
+    color: #0077ff;
+}
+
+.search {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.nav-user {
+    background: #eef2ff;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+/* PROFILE SECTION */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 20px;
+
+    background: #ffffff;
+
+    border-radius: 14px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* PROFILE CIRCLE */
+.profile-preview {
+    width: 110px;
+    height: 110px;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    border: 3px solid #4f8cff;
+
+    flex-shrink: 0;
+
+    cursor: pointer;
+    position: relative;
+}
+
+/* IMAGE */
+.profile-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FILE INPUT HIDDEN BUT CLICKABLE VIA LABEL */
+.profile-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CHANNEL INFO */
+.channel-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.channel-info input,
+.channel-info textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* PANELS */
+.panel {
+    flex: 1;
+
+    background: #ffffff;
+    border-radius: 16px;
+
+    padding: 22px;
+
+    /* 🔥 depth (modern soft shadow) */
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+
+    /* 🔥 smooth structure */
+    border: 1px solid #eef2f7;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    transition: all 0.25s ease-in-out;
+}
+
+/* 🔥 hover effect (important for modern UI feel) */
+.panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+/* PANEL HEADINGS */
+.panel h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #1e293b;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+/* GRID */
+.grid {
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    padding: 20px;
+    background: #f1f5f9;
+    border-radius: 8px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 10px;
+
+    background: #1bb474;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease-in-out;
+
+    box-shadow: 0 4px 10px rgba(0, 119, 255, 0.2);
+}
+
+/* hover effect */
+.btn:hover {
+    background: #005fd1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 119, 255, 0.3);
+}
+
+/* active (click effect) */
+.btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px rgba(0, 119, 255, 0.2);
+}
+
+/* disabled state */
+.btn:disabled {
+    background: #cbd5e1;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.field {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #dbe3ec;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #1e293b;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.25s ease-in-out;
+}
+
+/* focus effect */
+.field:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.15);
+}
+
+/* hover (subtle improvement) */
+.field:hover {
+    border-color: #a8b3c7;
+}
+
+/* placeholder styling */
+.field::placeholder {
+    color: #94a3b8;
+}
+
+/* textarea specific adjustment (optional but useful) */
+textarea.field {
+    min-height: 90px;
+    resize: none;
+}
+.upload-box {
+    width: 100%;
+    padding: 35px 25px;
+
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #f8fbff, #eef6ff);
+
+    border: 2px dashed #4f8cff;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: all 0.3s ease-in-out;
+
+    box-shadow: 0 8px 20px rgba(79, 140, 255, 0.08);
+}
+
+/* hover animation */
+.upload-box:hover {
+    transform: translateY(-3px);
+    border-color: #1e66ff;
+    box-shadow: 0 12px 28px rgba(30, 102, 255, 0.15);
+}
+
+/* icon style */
+.upload-box p {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* sub text */
+.upload-box small {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* hidden file input */
+.file-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}

@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #c9c9c9, #8c53a3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN BOX */
+.upload-container {
+    width: 400px;
+    background: rgba(0, 0, 0, 1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    color: white;
+    text-align: center;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+/* DROP ZONE */
+.drop-zone {
+    border: 2px dashed #00e6e6;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.05);
+}
+
+.drop-zone:hover {
+    background: rgba(0,230,230,0.1);
+}
+
+.drop-zone.active {
+    background: rgba(0,230,230,0.2);
+    border-color: #00ffcc;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #00e6e6;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00c2c2;
+}
+
+/* MESSAGE */
+.msg {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #00ffcc;
+}
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+
+    background: linear-gradient(90deg, #0077ff, #00c6ff);
+
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 20px;
+
+    transition: width 0.2s ease;
+}
