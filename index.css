@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: times new roman, serif;
 }
 
 /* =========================
@@ -169,4 +169,14 @@ h2 {
     margin-bottom: 20px;
      font-family : microsoft yahei, sans-serif;
      font-weight: light;    
+}
+
+#demo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family : times new roman, serif;
+    font-weight: light;
+    font-size: 15px;
+    color: #ff0000;
 }

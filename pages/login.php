@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
 
         if ($password == $row['password']) {
             $_SESSION['user'] = $row['name'];
-            header("Location: upload/dashboard.php");
+            header("Location: dashboard.php");
             exit();
         } else {
             $message = "Wrong password!";
