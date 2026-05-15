@@ -1,0 +1,70 @@
+/* Panel */
+.param-panel {
+  width: 260px;
+  height: calc(100vh - 35px);
+  background: #1f1f1f;
+  border-left: 1px solid #111;
+  overflow-y: auto;
+  transition: translateY(-90px);
+
+}
+
+/* Section */
+.param-section {
+  border-bottom: 1px solid #111;
+}
+
+/* Header (clickable) */
+.param-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  font-size: 12px;
+  color: #ccc;
+  background: #252525;
+  cursor: pointer;
+}
+
+.param-header:hover {
+  background: #2a2a2a;
+}
+
+/* Close button */
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* Body */
+.param-body {
+  padding: 8px;
+}
+
+/* Field */
+.field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.field label {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.field input {
+  width: 100px;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  color: #ddd;
+  font-size: 11px;
+  padding: 2px 4px;
+}

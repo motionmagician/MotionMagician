@@ -1,0 +1,66 @@
+.viewport-container {
+  position: relative;
+  width: 80%;
+  height: 80vh; /* 🔥 80% screen */
+  background: #1f1e1e;
+  overflow: hidden;
+}
+
+/* Canvas fills container */
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  
+}
+
+/* Controls */
+.viewport-controls {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.viewport-controls button {
+  width: 32px;
+  height: 32px;
+  background: #252525;
+  border: none;
+  border-radius: 6px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.viewport-controls button:hover {
+  background: #2f2f2f;
+}
+
+/* Label */
+.viewport-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  background: rgba(37, 37, 37, 0.8);
+  border-radius: 6px;
+  font-size: 12px;
+  color: #b3b3b3;
+  z-index: 10;
+}
+
+/* Axis helper */
+.viewport-axis {
+
+  bottom: 15px;
+  left: 15px;
+  z-index: 10;
+}
+
+.viewport {
+  flex: 1;              /* 👈 takes ALL remaining space */
+  height: 100%;
+  min-width: 0;         /* 👈 prevents overflow bugs */
+}
